@@ -1,0 +1,69 @@
+"""
+DJANGO
+python programlama dilini kullanir.
+web geliştirme framework'üdür. İçerisinde web geliştirme kütüphanelnerlerinin barındırır. bu yüzden framework diyoruz
+django server tarafinda çalişir. django, Backend web geliştirme platformu diuebiliriz.
+c# taki alternatifi asp.net tir. php,nodejs
+html ----->   </>  html i bir programlama dili olarak değerlendireimeyiz
+ 
+db <------>  djongo + html --->  </>  
+
+django, backend te geliştirilen bir web geliştirme platformudur.
+
+KURULUM:
+cmd aç
+önce python kurulumu yapilir. önce python yüklü mü kontrol edilir? cmd e  python --version yazilir
+
+pip install django**4.1.3 <-- djongoprocet.com adresinden güncel sürümü kopyalayıp cmd e yaz.
+
+cdm de, django -admin denildiğinde django komutlari gelir. Bu komutlarlari kullanacağız.
+bu komutları görüntülemek için cmd e gitmeyeceğiz. visual daki terminalde yazıp görüntüleyeceğiz.
+
+visual studio code da django eklentisini indiriyoruz(en çok indirilen)
+
+
+şimdi öncelikle django da kullanacağımız kodları görüntülemek için:
+powershell de --->  django-admin yazıyoruz enter    a basıyoruz
+proje başlatmak için -->   django-admin startproject projeismi   yazıyoruz. (projenin ismini biz belirliyoruz)
+sonrasında projeismi oluşmuş olacak onu alıp konsola sürüklüyoruz ki projenin içine girebilelim.
+sonra powershell de --->   python manage.py runserver diyoruz.
+Böylece terminalde,
+November 12, 2025 - 22:08:56
+Django version 5.2.8, using settings 'courseapp.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+benzeri bir şey görüntülüyoruz. Buradaki http ile başlayan adresi webte açtığımızda projelerimizi görüntüleyeceğim ekran açılacak
+
+Consolda proje başlattığımıda terminalde ki kırmızı ile gelen yazılar varsayılan ayarlar ve uygulamalardır. başlangıçta dikkate almayacağız bunları. bunlar Migrations
+
+
+Course--> courses,admin,account gibi projemiz için uygulamalar  ekleriz.
+ör: google-->görseller,videolar,haritalar
+
+projeye en az bir uygulama eklenmeli.
+
+python manage.py startapp courses powershell de yazıyoruz. yeni bir uygulama eklemiş olduk.
+
+settings.py içinde otomatik gelen ayarları görüntülüyoruz.
+Installed_app in içibe eklediğimiz uygulanın ismini yazıyoruz.
+her yeni oluşturulan uygulamanın burada tanıtılması gerekiyor.
+
+kullanıcı  ----->(request)  SERVER
+           <-----(response)
+
+
+  URL & VİEWS
+uygulamaya belirli url şemaları ekleyeceğiz
+urls.py içinde
+
+def home(request):
+    return HttpResponse("Anasayfa") 
+metot oluşturuyoruz sonra onu import ediyoruz.
+
+sonra pat içinde yolunu yazıyoruz.
+urlpatterns = [
+    path('',home),
+    path('anasayfa',home),
+
+
