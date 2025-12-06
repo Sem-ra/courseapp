@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css sadece görsel ve heade yazılır-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css"/>
+    
+    <title>Document</title>
+</head>
+<body>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
+        <div class="container">
+            <a href="/" class="navbar-brand">CourseApp</a>
+
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">Home</a>
+                </li>
+                 <li class="nav-item ">
+                    <a href='/iletisim' class="nav-link">Contact</a>
+                </li>
+                 <li class="nav-item ">
+                    <a href="/hakkimizda" class="nav-link">About Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+        <!--navbar ending-->
+
+        <!--Content-->
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-3">
+                    <!--Menu-->
+                    <div class="list-group">
+                        <a href="/" class="list-group-item list-group-item-action">Programlama</a>
+                        <a href="/" class="list-group-item list-group-item-action">Web Geliştirme</a>
+                        <a href="/" class="list-group-item list-group-item-action">Mobil Geliştirme</a>
+                    </div>
+                </div>
+                    <div class="col-9">
+                        <!-- Content -->
+                         {% block content %}{% endblock content %}
+                    </div>
+                
+            </div>
+        </div>
+             <!--Content ending-->
+
+    
+
+    
+    
+    
+        <!-- html'in beyni javascript js ve bodynin bittiği yerin hemen üstüne yazılır-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.min.js"></script>    
+</body>
+</html>
